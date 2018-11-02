@@ -1,0 +1,113 @@
+/**
+ * 文章相关样式
+ */
+
+// 文章列表
+.post-list {
+  .post-list-item {
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid @border-color-base;
+    .animated();
+    .fadeInDown();
+
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  .post-title {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color: @text-color;
+  }
+
+  .post-description {
+    margin-top: 20px;
+    color: @text-color-secondary;
+    word-break: break-all;
+  }
+}
+
+// 文章详情
+.post-box {
+  padding-bottom: 30px;
+}
+
+.post {
+  .animated();
+  .fadeInDown();
+
+  .post-title {
+    padding-bottom: 20px;
+
+    h3 {
+      display: block;
+      font-size: 20px;
+      font-weight: 600;
+      color: @text-color;
+    }
+
+    .date {
+      display: inline-block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: @font-size-sm;
+      color: @text-color-secondary;
+    }
+  }
+}
+
+// 文章分页
+.post-pagination {
+  padding: 30px 0 40px 0;
+  border-top: 1px solid @border-color-base;
+  .clearfix();
+
+  .prev,
+  .next {
+    display: inline-block;
+    color: @text-color-secondary;
+  }
+
+  .prev {
+    float: left;
+  }
+
+  .next {
+    float: right;
+  }
+}
+
+// 文章元信息
+.post-meta {
+  margin-top: 20px;
+  font-size: @font-size-sm;
+  color: @text-color-secondary;
+
+  & > li {
+    display: inline-block;
+
+    i.iconfont {
+      display: inline-block;
+      margin-right: 5px;
+      font-size: @font-size-sm;
+      color: @text-color-secondary;
+    }
+
+    a {
+      font-size: @font-size-sm;
+    }
+  }
+
+  & > li + li {
+    margin-left: 10px;
+  }
+}
+
+//- 文章评论
+.post-comments {
+  padding-top: 30px;
+}

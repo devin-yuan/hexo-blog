@@ -1,0 +1,70 @@
+/**
+ * 脚手架
+ */
+
+// Reset the box-sizing
+* {
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Body reset
+html {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  position: relative;
+  background-color: @body-background;
+  font-family: @font-family;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @text-color;
+
+  &::before {
+    position: absolute;
+    top: -150px;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+    height: 440px;
+    background: @component-background;
+    transform: skew(0, -7deg);
+  }
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+// Links
+a {
+  color: @link-color;
+  text-decoration: none;
+  transition: all 0.15s linear;
+
+  &:hover,
+  &:focus {
+    color: @link-hover-color;
+    text-decoration: @link-hover-decoration;
+  }
+
+  &:focus {
+    .tab-focus();
+  }
+}
+
+// Images
+img {
+  vertical-align: middle;
+}

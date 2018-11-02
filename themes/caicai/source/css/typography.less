@@ -1,0 +1,40 @@
+/**
+ * 排版
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+// 列表
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+
+  &.no-style {
+    list-style-type: none;
+  }
+}
+
+// 造字工坊言宋常规体 (logo用字)
+@font-face {
+  font-family: 'yansong';
+  src: url('../fonts/zzgf_ys_cgt.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// 华文中宋 (页脚座右铭)
+@font-face {
+  font-family: 'STZhongsong';
+  src: url('../fonts/STZhongsong.ttf');
+  font-weight: normal;
+  font-style: normal;
+}

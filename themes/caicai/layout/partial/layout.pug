@@ -1,0 +1,19 @@
+doctype
+html(lang= config.language ? config.language : 'zh-CN')
+  head
+    //- 将head.pug的文件内容插入进来
+    include head
+
+  body
+    .container
+      //- 将header.pug的文件内容插入进来
+      include header
+
+      block main
+
+    //- 将footer.pug的文件内容插入进来
+    include footer
+
+    script(src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js")
+    script.
+      hljs.initHighlightingOnLoad();

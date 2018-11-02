@@ -1,0 +1,21 @@
+# head
+head:
+  keywords: Html,CSS,JavaScript
+  favicon: /images/favicon.png
+
+# footer
+footer:
+  slogan: 你好，世界！
+
+# less
+less:
+  compress: true
+
+# comments
+comments:
+  disqus: youwei-2
+
+# highlight
+highlight:
+  theme: atom-one-dark
+  version: 9.12.0
