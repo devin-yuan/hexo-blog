@@ -1,0 +1,38 @@
+//- head 部分
+meta(charset="utf-8")
+//-
+  如果支持Google Chrome Frame：GCF，则使用GCF渲染
+  如果系统安装ie8或以上版本，则使用最高版本ie渲染
+meta(name="X-UA-Compatible", content="IE=edge,chrome=1")
+//-
+  强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览
+  width: viewport的宽度
+  * height: viewport的高度
+  initial-scale: 初始的缩放比例
+  * minimum-scale: 允许用户缩放到的最小比例
+  maximum-scale: 允许用户缩放到的最大比例
+  user-scalable: 用户是否可以手动缩放
+meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+//- 优先以webkit内核渲染页面
+meta(name="renderer", content="webkit")
+//- 页面标题
+title
+  block site_title
+    = config.title
+//- 页面关键字
+meta(name="keywords", content= page.keywords ? page.keywords : theme.head.keywords)
+//- 页面描述
+block description
+  meta(name="description", content= config.description ? config.description : 'A Blog Powered By Hexo')
+//- iphone设备中的safari私有meta标签，它表示：允许全屏模式浏览
+meta(name="apple-mobile-web-app-capable", content="yes")
+//- iphone的私有标签，它指定的iphone中safari顶端的状态条的样式
+meta(name="apple-mobile-web-app-status-bar-style", content="black")
+//- 告诉设备忽略将页面中的数字识别为电话号码
+meta(name="format-detection", content="telephone=no")
+//- 作者信息
+meta(name="author", content= config.author)
+//- 网站favicon
+link(rel="short icon", href= theme.head.favicon, type="image/x-icon")
+link(rel="stylesheet", href= url_for('css/style.css'))
+link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css")

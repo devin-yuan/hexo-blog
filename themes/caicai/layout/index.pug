@@ -1,0 +1,18 @@
+//- 首页
+
+//- 继承布局模板
+extends partial/layout
+
+//- 替换内容部分
+block main
+  .post-list
+    if page.posts.length > 0
+      - page.posts.each(function(item) {
+        include mixins
+        +postListItem(item, false)
+      - })
+    else
+      div No result
+
+  include mixins
+  +postListPagination()

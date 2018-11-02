@@ -1,0 +1,19 @@
+//- 文章页
+//- 继承布局模板
+extends partial/layout
+
+block site_title
+  != `${page.title} · ${config.title}`
+
+block description
+  - var desc = page.desc || strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150);
+  meta(name="description", content=desc)
+
+//- 替换内容部分
+block main
+  .post-box
+    include mixins
+    +postDetail(page)
+
+    if page.comments
+      include partial/comments
